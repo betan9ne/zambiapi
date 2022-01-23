@@ -1,0 +1,257 @@
+<html>
+    <head>
+    <title>A Zambian API </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin:50px auto;
+            width: 50%;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(22, 28, 36);
+            color: white;
+        }
+        h3{
+            
+            text-transform: capitalize;
+            font-weight: 500;
+            background-color: rgba(145, 158, 171, 0.16);
+            margin:0 0 20px 0; padding: 10px 20px;
+        }
+        p{
+            margin:0; 
+            padding: 10px 30px;
+        }
+        div{
+            background-color: rgb(33, 43, 54);
+            margin-top: 20px;
+            
+            border-radius: 10px;
+            border:thin solid #33333390;
+         
+        }
+        a{
+            color: inherit;
+            font-weight: 300;
+            padding: 20px 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+    <body>
+        <h1 style="text-align: center;">Get access to Provinces, Towns, Townships and Streets</h1>
+        <div>
+        <h3>get list of all the provinces</h3> 
+        <a href="https://zambiapi.herokuapp.com/provinces">https://zambiapi.herokuapp.com/provinces </a>
+        <p>
+            <br/>
+            {   <br/>
+                "_id": "613549407d04d2aafb909f2f",<br/>
+                "code": 10,<br/>
+                "prov_name": "Lusaka",<br/>
+                "__v": 0<br/>
+            }
+        </p></div>
+        
+        <div><h3>get list of towns</h3> 
+        <a href="https://zambiapi.herokuapp.com/towns">https://zambiapi.herokuapp.com/towns</a>
+        <p>
+        <br/>
+            {<br/>"_id": "613558c72e010cfe382b7c35",<br/>
+                "code": 2030,<br/>
+                "town_name": "CHISEKESI",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "__v": 0<br/>
+            }
+        </p></div>
+
+        <div><h3> get one town by town code (code)</h3> 
+        <a href="https://zambiapi.herokuapp.com/towns/2043">https://zambiapi.herokuapp.com/towns/id</a>
+        <p>
+            <br/>
+            {<br/>
+            "_id": "613558c72e010cfe382b7c33",<br/>
+            "code": 2043,<br/>
+            "town_name": "KAZUNGULA",<br/>
+            "prov_name": "Southern",<br/>
+            "prov_code": 20,<br/>
+            "__v": 0<br/>
+            }
+        </p></div>
+
+        <div><h3>    get list of towns by province code (prov_code)</h3> 
+        <a href="https://zambiapi.herokuapp.com/towns/province/20">https://zambiapi.herokuapp.com/towns/province/id</a>
+        
+        <p><br/>
+            {<br/>
+                "_id": "613558c72e010cfe382b7c35",<br/>
+                "code": 2030,<br/>
+                "town_name": "CHISEKESI                     ",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "__v": 0<br/>
+                },
+        </p></div>
+                
+        <div><h3>   get list of all the townships</h3> 
+        <a href="https://zambiapi.herokuapp.com/townships">https://zambiapi.herokuapp.com/townships</a>
+        
+        <p>   <br/>
+            {<br/>
+                "_id": "61356951cb1ff0dc5d4c6e07",<br/>
+                "code": 8123,<br/>
+                "township_name": "ZR COMPOUND",<br/>
+                "town_code": 2030,<br/>
+                "town_name": "CHISEKESI                     ",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "}
+        </p></div>
+
+        <div>
+                <h3>  get one township by township code (code)</h3> 
+        <a href="https://zambiapi.herokuapp.com/townships/8123">https://zambiapi.herokuapp.com/townships/id</a>
+        
+        <p>
+            <br/>
+            {<br/>
+                "_id": "61356951cb1ff0dc5d4c6e07",<br/>
+                "code": 8123,<br/>
+                "township_name": "ZR COMPOUND",<br/>
+                "town_code": 2030,<br/>
+                "town_name": "CHISEKESI",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "}
+        </p>
+    </div>
+        
+    <div> <h3>   get list of townships by town code (town_code)</h3> 
+        <A href="https://zambiapi.herokuapp.com/townships/town/2030">https://zambiapi.herokuapp.com/townships/town/id</A> 
+        <p>
+            <br/>
+            {<br/>
+                "_id": "61356951cb1ff0dc5d4c6e07",<br/>
+                "code": 8123,<br/>
+                "township_name": "ZR COMPOUND",<br/>
+                "town_code": 2030,<br/>
+                "town_name": "CHISEKESI",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "}
+        </p></div>
+
+        <div><h3>   get list of townships by province code (prov_code)</h3> 
+       <a href="https://zambiapi.herokuapp.com/townships/province/20"> https://zambiapi.herokuapp.com/townships/province/id </a>
+        <p>
+                <br/>
+                {<br/>
+                    "_id": "61356951cb1ff0dc5d4c6e07",<br/>
+                    "code": 8123,<br/>
+                    "township_name": "ZR COMPOUND",<br/>
+                    "town_code": 2030,<br/>
+                    "town_name": "CHISEKESI                     ",<br/>
+                    "prov_name": "Southern",<br/>
+                    "prov_code": 20,<br/>
+                    "}
+        </p></div>
+
+        <div> <h3> get list of all the streets</h3> 
+        <a href="https://zambiapi.herokuapp.com/streets">https://zambiapi.herokuapp.com/streets</a>
+        <p>
+        <br/>
+                {<br/>
+                    
+                "_id": "6135a2787a24aee710103bdc",<br/>
+                "code": 55148,<br/>
+                "street_name": "MABWIZU VILLAGE",<br/>
+                "township_code": 8120,<br/>
+                "township_name": "MABWIZU VILLAGE",<br/>
+                "town_code": 2030,<br/>
+                "town_name": "CHISEKESI                     ",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "__v": 0<br/>
+                }</p>
+            </div>
+
+            <div><h3>get one street by street code (code)</h3> 
+                <a href="https://zambiapi.herokuapp.com/streets/55148">https://zambiapi.herokuapp.com/streets/id</a>
+                <p>
+        <br/>
+                {
+                    <br/>
+                "_id": "6135a2787a24aee710103bdc",<br/>
+                "code": 55148,<br/>
+                "street_name": "MABWIZU VILLAGE",<br/>
+                "township_code": 8120,<br/>
+                "township_name": "MABWIZU VILLAGE",<br/>
+                "town_code": 2030,<br/>
+                "town_name": "CHISEKESI                     ",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "__v": 0<br/>
+                }
+            </p></div>
+
+            <div><h3>get list of streets by township code (township_code)</h3> 
+        <a href="https://zambiapi.herokuapp.com/streets/township/8120">https://zambiapi.herokuapp.com/streets/township/id</a>
+        <p>
+            <br/>
+                    {
+                        <br/>
+                    "_id": "6135a2787a24aee710103bdc",<br/>
+                    "code": 55148,<br/>
+                    "street_name": "MABWIZU VILLAGE",<br/>
+                    "township_code": 8120,<br/>
+                    "township_name": "MABWIZU VILLAGE",<br/>
+                    "town_code": 2030,<br/>
+                    "town_name": "CHISEKESI                     ",<br/>
+                    "prov_name": "Southern",<br/>
+                    "prov_code": 20,<br/>
+                    "__v": 0<br/>
+                    }</p>
+        </div>
+
+        <div><h3>get list of streets by town code (town_code)</h3> 
+        <a href="https://zambiapi.herokuapp.com/streets/town/2030">https://zambiapi.herokuapp.com/streets/town/id</a>
+        <p>
+        <br/>
+                {
+                    <br/>
+                "_id": "6135a2787a24aee710103bdc",<br/>
+                "code": 55148,<br/>
+                "street_name": "MABWIZU VILLAGE",<br/>
+                "township_code": 8120,<br/>
+                "township_name": "MABWIZU VILLAGE",<br/>
+                "town_code": 2030,<br/>
+                "town_name": "CHISEKESI                     ",<br/>
+                "prov_name": "Southern",<br/>
+                "prov_code": 20,<br/>
+                "__v": 0<br/>
+                }</p>
+        </div>
+<div>
+                <h3>get list of streets by province code (prov_code)</h3> 
+                <a href="https://zambiapi.herokuapp.com/streets/province/20">https://zambiapi.herokuapp.com/streets/province/id</a>
+                <p>
+                <br/>
+                        {
+                            <br/>
+                        "_id": "6135a2787a24aee710103bdc",<br/>
+                        "code": 55148,<br/>
+                        "street_name": "MABWIZU VILLAGE",<br/>
+                        "township_code": 8120,<br/>
+                        "township_name": "MABWIZU VILLAGE",<br/>
+                        "town_code": 2030,<br/>
+                        "town_name": "CHISEKESI                     ",<br/>
+                        "prov_name": "Southern",<br/>
+                        "prov_code": 20,<br/>
+                        "__v": 0<br/>
+                        }</p>
+                    </div>
+        
+    </body>
+</html>
